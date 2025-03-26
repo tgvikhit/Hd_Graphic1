@@ -605,7 +605,7 @@
                 <h2>تواصل معي</h2>
             </div>
             <div class="contact-form fade-in delay-1">
-                <form id="contactForm" action="https://formsubmit.co/mddhhkhgfdss@gmail.com" method="POST">
+                <form action="https://formsubmit.co/mddhhkhgfdss@gmail.com" method="POST">
                     <input type="hidden" name="_captcha" value="false">
                     <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
                     
@@ -673,7 +673,7 @@
         });
         
         // معالجة نموذج التواصل
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
             // لا داعي لمنع السلوك الافتراضي لأننا نستخدم FormSubmit
             alert('شكراً لك على رسالتك! سأتواصل معك في أقرب وقت ممكن.');
         });
