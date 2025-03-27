@@ -606,37 +606,57 @@
         <div class="container">
             <div class="section-title fade-in">
                 <h2>تواصل معي</h2>
-            </div>
-            <div class="contact-form fade-in delay-1">
-                <form action="https://formsubmit.co/mddhhkhgfdss@gmail.com" method="POST">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
-                    
-                    <div class="form-group">
-                        <label for="name">الاسم الكامل</label>
-                        <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكامل">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">البريد الإلكتروني</label>
-                        <input type="email" id="email" name="email" required placeholder="أدخل بريدك الإلكتروني">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">الموضوع</label>
-                        <input type="text" id="subject" name="subject" required placeholder="موضوع الرسالة">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">الرسالة</label>
-                        <textarea id="message" name="message" required placeholder="أدخل رسالتك هنا..."></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-button">
-                        <i class="fas fa-paper-plane"></i> إرسال الرسالة
-                    </button>
-                </form>
-            </div>
+                <div class="contact-form fade-in delay-1">
+                    <form action="https://formsubmit.co/mddhhkhgfdss@gmail.com" method="POST">
+                        <!-- إعدادات FormSubmit -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="رسالة جديدة من موقعك!">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+                        <input type="hidden" name="_autoresponse" value="شكراً لتواصلك! سنرد عليك قريباً.">
+                        
+                        <!-- حقل الاسم -->
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكامل">
+                        </div>
+                        
+                        <!-- حقل البريد الإلكتروني -->
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required placeholder="أدخل بريدك الإلكتروني">
+                        </div>
+                        
+                        <!-- حقل الهاتف (اختياري) -->
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف (اختياري)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="أدخل رقم هاتفك">
+                        </div>
+                        
+                        <!-- حقل الموضوع -->
+                        <div class="form-group">
+                            <label for="subject">الموضوع</label>
+                            <select id="subject" name="_subject" required class="form-control">
+                                <option value="" disabled selected>اختر موضوع الرسالة</option>
+                                <option value="استفسار عن خدمة">استفسار عن خدمة</option>
+                                <option value="طلب عرض سعر">طلب عرض سعر</option>
+                                <option value="تعليق أو اقتراح">تعليق أو اقتراح</option>
+                                <option value="أخرى">أخرى</option>
+                            </select>
+                        </div>
+                        
+                        <!-- حقل الرسالة -->
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" name="message" required placeholder="أدخل رسالتك هنا..." rows="5"></textarea>
+                        </div>
+                        
+                        <!-- زر الإرسال -->
+                        <button type="submit" class="submit-button">
+                            <i class="fas fa-paper-plane"></i> إرسال الرسالة
+                        </button>
+                    </form>
+                </div> 
         </div>
     </section>
 
